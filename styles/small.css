@@ -18,17 +18,17 @@ body {
     background-color: var(--light-color);
     line-height: 1.6;
     /* Guardrail: Prevents horizontal scrolling in all views */
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 
 /* -------------------- Design Principles & Structure -------------------- */
 
 /* Proximity & Alignment: Center container and add padding */
-main, header, footer, nav {
+main, header, footer { /* Removed 'nav' here to allow it to be full-width if needed */
     max-width: 1200px; /* Max width to stop elements from stretching too wide on large screens */
     margin: 0 auto;
     /* Guardrail: Prevents text from touching the edge (Visual Tangent Error) */
-    padding: 1rem; 
+    padding: 1rem;
 }
 
 h1, h2, h3 {
@@ -45,19 +45,27 @@ header {
     align-items: center;
     background-color: var(--dark-color);
     color: var(--light-color);
+    padding: 1rem; /* Ensure consistent padding */
+}
+
+.logo-link {
+    display: flex; /* Allow logo and span to align if needed, though logo.svg is a single element */
+    align-items: center;
+    text-decoration: none; /* Remove underline from logo link */
+    color: inherit; /* Inherit color from header */
+}
+
+/* Style the site logo */
+header .logo-link img {
+    height: 50px; /* Set a fixed height for consistency */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between logo and name */
 }
 
 header span {
     font-size: 1.5rem;
     font-weight: 700;
-}
-
-/* Image Guardrail: Prevents distortion */
-header img, .social-links img {
-    width: auto;
-    max-width: 100%; 
-    height: auto;
-    vertical-align: middle;
+    color: var(--light-color); /* Ensure name color is visible */
 }
 
 /* Hamburger menu button styling */
@@ -71,18 +79,20 @@ header img, .social-links img {
     padding: 0.5rem;
 }
 
+/* Hide navigation by default for small screens */
 nav {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); /* Background for the mobile nav area */
+    width: 100%; /* Ensure nav takes full width */
 }
 
 #primary-nav {
     list-style: none;
     padding: 0;
     margin: 0;
-    /* Initially hide the menu for small screens (will open via JS) */
-    display: none; 
+    display: none; /* Initially hide the menu for small screens (will open via JS) */
     flex-direction: column; /* Stack vertically */
     text-align: center;
+    width: 100%; /* Ensure the list itself takes full width */
 }
 
 /* JavaScript Class to show the menu */
@@ -95,8 +105,12 @@ nav a {
     padding: 0.75rem 1rem;
     text-decoration: none;
     color: var(--light-color);
-    /* Repetition & Contrast: Use primary color scheme */
-    background-color: var(--primary-color); 
+    background-color: var(--primary-color);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Visual separation for menu items */
+}
+
+nav li:last-child a {
+    border-bottom: none; /* No border for the last item */
 }
 
 /* Guardrail: No twitching on hover */
@@ -118,6 +132,8 @@ section {
     margin-bottom: 1rem;
     display: flex;
     gap: 0.5rem;
+    flex-wrap: wrap; /* Allow buttons to wrap on very small screens */
+    justify-content: center; /* Center buttons */
 }
 
 .course-filters button {
@@ -128,6 +144,8 @@ section {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s;
+    flex-grow: 1; /* Allow buttons to grow to fill space */
+    max-width: 150px; /* Prevent them from becoming too wide */
 }
 
 .course-filters button:hover, .course-filters button.active-filter {
@@ -153,7 +171,7 @@ section {
 .completed-course {
     /* Use the secondary color to signify completion (Strong Contrast) */
     background-color: #fff9c4; /* Lighter shade of yellow/secondary */
-    border-left: 5px solid green; 
+    border-left: 5px solid green;
 }
 
 .total-credits {
@@ -175,10 +193,13 @@ footer {
     gap: 0.5rem;
 }
 
+.social-links {
+    margin-bottom: 0.5rem; /* Space between social links and copyright */
+}
+
 .social-links a {
     margin: 0 0.5rem;
-    /* Placeholder styles for social media icons */
-    color: var(--secondary-color); 
+    color: var(--secondary-color);
     font-size: 1.5rem;
     text-decoration: none;
 }
