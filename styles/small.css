@@ -1,0 +1,184 @@
+/* styles/small.css - Base Styles (Mobile First) */
+
+/* -------------------- Custom Variables and Setup -------------------- */
+
+:root {
+    /* Color Schema (Adjust these to your preference for Contrast/Repetition) */
+    --primary-color: #4a148c;   /* Deep Purple (Main header/accents) */
+    --secondary-color: #fdd835; /* Yellow/Gold (Completion status/Highlights) */
+    --accent-color: #e57373;    /* Light Red (Error/Warning) */
+    --light-color: #f3f3f3;     /* Light Gray Background */
+    --dark-color: #212121;      /* Dark Text */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Assumed Google Font from previous step */
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    line-height: 1.6;
+    /* Guardrail: Prevents horizontal scrolling in all views */
+    overflow-x: hidden; 
+}
+
+/* -------------------- Design Principles & Structure -------------------- */
+
+/* Proximity & Alignment: Center container and add padding */
+main, header, footer, nav {
+    max-width: 1200px; /* Max width to stop elements from stretching too wide on large screens */
+    margin: 0 auto;
+    /* Guardrail: Prevents text from touching the edge (Visual Tangent Error) */
+    padding: 1rem; 
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* -------------------- Header and Navigation -------------------- */
+
+header {
+    display: flex;
+    justify-content: space-between; /* Space logo/name and hamburger */
+    align-items: center;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
+header span {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Image Guardrail: Prevents distortion */
+header img, .social-links img {
+    width: auto;
+    max-width: 100%; 
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Hamburger menu button styling */
+#menu-toggle {
+    background: none;
+    border: none;
+    color: var(--light-color);
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: block; /* Visible on small screens */
+    padding: 0.5rem;
+}
+
+nav {
+    background-color: var(--primary-color);
+}
+
+#primary-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* Initially hide the menu for small screens (will open via JS) */
+    display: none; 
+    flex-direction: column; /* Stack vertically */
+    text-align: center;
+}
+
+/* JavaScript Class to show the menu */
+#primary-nav.open {
+    display: flex;
+}
+
+nav a {
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: var(--light-color);
+    /* Repetition & Contrast: Use primary color scheme */
+    background-color: var(--primary-color); 
+}
+
+/* Guardrail: No twitching on hover */
+nav a:hover, nav a.active {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+    /* Crucial: Don't change padding or border that would shift elements */
+}
+
+/* -------------------- Main Content and Cards -------------------- */
+
+section {
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--dark-color);
+}
+
+.course-filters {
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.course-filters button {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.course-filters button:hover, .course-filters button.active-filter {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+}
+
+/* Course Card Design (Repetition & Contrast) */
+.course-card {
+    border: 1px solid var(--primary-color);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    transition: transform 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-3px);
+}
+
+/* Contrast: Styling for COMPLETED courses */
+.completed-course {
+    /* Use the secondary color to signify completion (Strong Contrast) */
+    background-color: #fff9c4; /* Lighter shade of yellow/secondary */
+    border-left: 5px solid green; 
+}
+
+.total-credits {
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 0.5rem 0;
+}
+
+/* -------------------- Footer -------------------- */
+
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.social-links a {
+    margin: 0 0.5rem;
+    /* Placeholder styles for social media icons */
+    color: var(--secondary-color); 
+    font-size: 1.5rem;
+    text-decoration: none;
+}

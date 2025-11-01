@@ -1,12 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <meta author="Carlos Valdes">
+    <meta name="author" content="Carlos Valdes">
+    <meta name="description" content="Home page for the WDD231 course assignments.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <title>WDD231 Home | Carlos Valdes</title>
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
 </head>
 <body>
-    
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="images/logo.svg" alt="Site Logo" width="50" height="50">
+        </a>
+        <span>Carlos Valdes</span>
+        <button id="menu-toggle" aria-label="Toggle Navigation Menu">&#9776;</button>
+    </header>
+
+    <nav>
+        <ul id="primary-nav">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="chamber/index.html">Chamber</a></li>
+            <li><a href="final/index.html">Final</a></li>
+            <li><a href="https://byui.edu" target="_blank">BYU-Idaho</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+
+        <section>
+            <h2>About Me</h2>
+            <p>Welcome to my WDD231 course assignment page. I am a student pursuing a degree in Web Development. This project serves as a portfolio of my work throughout the semester.</p>
+        </section>
+
+        <section>
+            <h2>Course Information</h2>
+            
+            <div class="course-filters">
+                <button id="filterAll">All Courses</button>
+                <button id="filterWDD">WDD Courses</button>
+                <button id="filterCSE">CSE Courses</button>
+            </div>
+            
+            <div id="course-cards-container">
+                <p>Course content and cards will load here...</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Assignments</h2>
+            <ul>
+                <li>Week 01: Project Setup and Basic HTML/CSS</li>
+                <li>Week 02: Chamber of Commerce Project - Home Page</li>
+                <li>Week 03: Local Storage and Data Manipulation</li>
+                <li>...</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/cvaldesh/wdd231" target="_blank" aria-label="GitHub Repository">
+                
+            </a>
+            <a href="https://www.linkedin.com/in/carlos-valdes-684a5a193/" target="_blank" aria-label="LinkedIn Profile">
+                
+            </a>
+            <a href="#" target="_blank" aria-label="X (Twitter) Profile">
+                
+            </a>
+            <a href="mailto:cvaldesh@email.com" aria-label="Send Email">
+                
+            </a>
+        </div>
+
+        <div>
+            &copy; <span id="currentYear">2025</span> Carlos Valdes | Chile
+        </div>
+
+        <div>
+            <p id="lastModified">Last Modified: </p>
+        </div>
+    </footer>
 </body>
 </html>

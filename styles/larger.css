@@ -1,0 +1,71 @@
+/* styles/larger.css - Responsive Styles for Larger Screens */
+
+/* * Required Media Query: Adjusts layout for screens wider than 640px 
+ * (The breakpoint for min-width must be 640px or higher to meet the 320px up requirement) 
+ */
+@media screen and (min-width: 640px) {
+    
+    /* -------------------- Header and Navigation Changes -------------------- */
+
+    header {
+        /* Align logo left, name center, nav right (optional) */
+        justify-content: space-between; 
+        padding: 1rem 2rem;
+    }
+
+    /* Hide the hamburger icon on larger screens */
+    #menu-toggle {
+        display: none; 
+    }
+
+    nav {
+        background: none; /* Make nav transparent or match header */
+    }
+
+    #primary-nav {
+        /* Repetition/Alignment: Display horizontal, always visible */
+        display: flex; 
+        flex-direction: row; 
+        justify-content: flex-end; /* Push links to the right */
+        gap: 1.5rem;
+    }
+
+    nav a {
+        background-color: var(--dark-color); /* Match header color */
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+    }
+
+    /* -------------------- Main Content Layout Change (Non-Default Flow) -------------------- */
+
+    main {
+        /* Guardrail: Must not be a simple one-column layout */
+        display: grid;
+        /* Create a two-column layout for the sections */
+        grid-template-columns: 1fr 1fr; 
+        gap: 2rem; /* Increase gap for Proximity */
+        padding: 1.5rem;
+    }
+
+    /* Make the H1 and the "Assignments" section span across both columns for better hierarchy */
+    h1, section:nth-of-type(3) { /* Targets the "Assignments" section */
+        grid-column: 1 / -1; 
+    }
+    
+    /* Place the first two sections side-by-side */
+    section:nth-of-type(1) {
+        grid-column: 1 / 2;
+    }
+
+    section:nth-of-type(2) {
+        grid-column: 2 / 3;
+    }
+    
+    /* Footer Layout: Change from stacked to side-by-side */
+    footer {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+}
