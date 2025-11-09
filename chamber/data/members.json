@@ -1,0 +1,92 @@
+[
+    {
+        "name": "El Trigal Bakery of Lora",
+        "address": "Av. Las Flores #150, Lora",
+        "phone": "75 2555 101",
+        "website": "https://www.eltrigallora.com",
+        "image": "https://placehold.co/400x300/FAD79A/5B3A1C?text=Bakery",
+        "membershipLevel": 3,
+        "otherInfo": "Specialized in kneaded bread and traditional Chilean sweets."
+    },
+    {
+        "name": "The Iloca Breeze Inn",
+        "address": "Ruta Costera Sur S/N, Iloca",
+        "phone": "75 2555 102",
+        "website": "https://www.hostalbrisa.cl",
+        "image": "https://placehold.co/400x300/A3D0C3/1F403D?text=Inn",
+        "membershipLevel": 2,
+        "otherInfo": "Sea-view accommodation and delicious homemade breakfasts."
+    },
+    {
+        "name": "The Hook Fish Market",
+        "address": "Caleta de Duao S/N",
+        "phone": "75 2555 103",
+        "website": "https://www.elanzuelo.cl",
+        "image": "https://placehold.co/400x300/698B9D/FFFFFF?text=Fish+Market",
+        "membershipLevel": 3,
+        "otherInfo": "Fresh seafood products, daily sales to the public and restaurants."
+    },
+    {
+        "name": "Mataquito Sunset Vineyard",
+        "address": "Camino Vecinal 45, Licantén",
+        "phone": "75 2555 104",
+        "website": "https://www.vinaocasomataquito.cl",
+        "image": "https://placehold.co/400x300/8B0000/FFFFFF?text=Vineyard",
+        "membershipLevel": 1,
+        "otherInfo": "Producers of coastal dry-farmed Syrah and Carmenère grapes."
+    },
+    {
+        "name": "The Return Minimarket",
+        "address": "Calle Principal #201, Licantén",
+        "phone": "75 2555 105",
+        "website": "https://www.elretorno.com",
+        "image": "https://placehold.co/400x300/F5CBA7/76448A?text=Minimarket",
+        "membershipLevel": 2,
+        "otherInfo": "Open 24 hours. Essential goods and local products."
+    },
+    {
+        "name": "Mataquito Hardware Store",
+        "address": "Ruta J-60 Km 3, Licantén",
+        "phone": "75 2555 106",
+        "website": "https://www.ferreteriataquito.cl",
+        "image": "https://placehold.co/400x300/5D6D7E/FFFFFF?text=Hardware",
+        "membershipLevel": 1,
+        "otherInfo": "Construction materials and tool rental services."
+    },
+    {
+        "name": "Licantén Coffee and Crafts",
+        "address": "Plaza de Armas #12, Licantén",
+        "phone": "75 2555 107",
+        "website": "https://www.cafeartesania.cl",
+        "image": "https://placehold.co/400x300/D4AC0D/1C2833?text=Coffee",
+        "membershipLevel": 3,
+        "otherInfo": "Specialty coffee and sales of local crafts and souvenirs."
+    },
+    {
+        "name": "The Coastal Pharmacy",
+        "address": "Av. Iloca 44, Iloca",
+        "phone": "75 2555 108",
+        "website": "https://www.farmaciacostera.cl",
+        "image": "https://placehold.co/400x300/F0F3F4/2C3E50?text=Pharmacy",
+        "membershipLevel": 2,
+        "otherInfo": "Full service pharmacy and health clinic."
+    },
+    {
+        "name": "Duao Handicrafts Center",
+        "address": "Costanera S/N, Duao",
+        "phone": "75 2555 109",
+        "website": "https://www.arteduo.cl",
+        "image": "https://placehold.co/400x300/E59866/5B2C6F?text=Crafts",
+        "membershipLevel": 3,
+        "otherInfo": "Showcasing traditional Maule clay and wood crafts."
+    },
+    {
+        "name": "Licantén Municipal Services",
+        "address": "Calle Central 10, Licantén",
+        "phone": "75 2555 110",
+        "website": "https://www.munilicanten.cl",
+        "image": "https://placehold.co/400x300/5499C7/FFFFFF?text=Municipality",
+        "membershipLevel": 1,
+        "otherInfo": "Local government offices and public services."
+    }
+]
