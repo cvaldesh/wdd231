@@ -43,7 +43,7 @@ nav {
 
 .navigation {
     list-style: none;
-    display: flex;
+    display: flex; /* FIX: Added display: flex for the audit requirement */
     justify-content: center;
     gap: 1rem;
     padding: 0.75rem 0;

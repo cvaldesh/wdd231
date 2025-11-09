@@ -1,12 +1,22 @@
 const directorySection = document.getElementById('member-directory');
 const toggleViewBtn = document.getElementById('toggleViewBtn');
+const messageCloseBtn = document.getElementById('messageCloseBtn'); // Added element reference
+
 // Set the correct relative path for the JSON file
 const memberDataUrl = 'chamber/data/members.json'; 
 
 // --- Custom Alert Function (Non-blocking message box) ---
 function showMessage(text) {
+    // The .message-box class handles the positioning and styling
     document.getElementById('messageText').textContent = text;
     document.getElementById('messageBox').style.display = 'block';
+}
+
+// --- Event Listener for closing message box (FIX for No onClick Attributes) ---
+if (messageCloseBtn) {
+    messageCloseBtn.addEventListener('click', () => {
+        document.getElementById('messageBox').style.display = 'none';
+    });
 }
 
 // --- Main Data Fetching and Display Logic ---
@@ -50,7 +60,7 @@ function displayMembers(members) {
         else levelName = 'Bronze';
 
         if (isGridView) {
-            // Grid View HTML Structure
+            // Grid View HTML Structure - Replaced inline style with .other-info class
             card.innerHTML = `
                 <img src="${member.image}" alt="${member.name} Logo" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x300/CCCCCC/333333?text=Logo+Not+Available';">
                 <h2>${member.name}</h2>
@@ -58,14 +68,14 @@ function displayMembers(members) {
                 <p>${member.address}</p>
                 <p>${member.phone}</p>
                 <a href="${member.website}" target="_blank">Visit Website</a>
-                <p style="margin-top: 0.5rem; font-style: italic;">"${member.otherInfo}"</p>
+                <p class="other-info">"${member.otherInfo}"</p>
             `;
         } else {
-            // List View HTML Structure
+            // List View HTML Structure - Replaced inline style with .level-name-list class
             card.innerHTML = `
                 <img src="${member.image}" alt="${member.name} Logo" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/80x80/CCCCCC/333333?text=Logo';">
                 <div class="info">
-                    <h2>${member.name} <span style="font-size: 0.8em; font-weight: normal; color: var(--color-accent);">(${levelName})</span></h2>
+                    <h2>${member.name} <span class="level-name-list">(${levelName})</span></h2>
                     <p>${member.address}</p>
                 </div>
                 <div class="contact">
