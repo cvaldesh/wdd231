@@ -4,7 +4,7 @@ const toggleViewBtn = document.getElementById('toggleViewBtn');
 const messageCloseBtn = document.getElementById('messageCloseBtn'); 
 
 // Set the correct relative path for the JSON file
-const memberDataUrl = '../data/members.json';
+const memberDataUrl = 'data/members.json'; // REMOVE 'chamber/'
 
 // --- Custom Alert Function (Non-blocking message box) ---
 function showMessage(text) {
