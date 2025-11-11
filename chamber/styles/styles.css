@@ -6,10 +6,9 @@
 }
 
 :root {
-    /* Color Palette: Maule Green and Pacific Navy Blue */
-    --color-primary: #0E834B;   /* Dark Green */
-    --color-secondary: #0A3C59; /* Navy Blue */
-    --color-accent: #FAD74B;    /* Yellow/Gold (for accents and Gold level) */
+    --color-primary: #0E834B;
+    --color-secondary: #0A3C59;
+    --color-accent: #FAD74B;
     --color-text-light: #F8F8F8;
     --color-text-dark: #333;
     --color-background: #EDEDED;
@@ -43,7 +42,6 @@ nav {
 
 .navigation {
     list-style: none;
-    /* This is the key 'display: flex' for the navigation */
     display: flex; 
     justify-content: center;
     gap: 1rem;
@@ -70,7 +68,6 @@ main {
 }
 
 .directory-controls {
-    /* This is the key 'display: flex' for the control buttons */
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -95,7 +92,6 @@ main {
 
 /* --- Directory Display (Grid and List) --- */
 #member-directory {
-    /* Note: display: grid is used here */
     display: grid;
     gap: 1rem;
 }
@@ -110,7 +106,6 @@ main {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 1rem;
-    /* This is a key 'display: flex' for the grid card content */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -137,7 +132,6 @@ main {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 1rem;
-    /* Note: display: grid is used here for the list layout */
     display: grid;
     grid-template-columns: 100px 1fr 150px 150px; /* Logo | Info | Phone | Website */
     align-items: center;
@@ -155,7 +149,6 @@ main {
 }
 
 .member-card.list-view .info {
-    /* This is a key 'display: flex' for the info column within the list card */
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
@@ -247,7 +240,6 @@ footer p {
 /* --- Responsive Styles (Mobile First) --- */
 @media (max-width: 600px) {
     .navigation {
-        /* This changes the flex direction for mobile navigation */
         flex-direction: column;
         gap: 0.5rem;
     }
