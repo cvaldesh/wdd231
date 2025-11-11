@@ -1,6 +1,7 @@
 const directorySection = document.getElementById('member-directory');
 const toggleViewBtn = document.getElementById('toggleViewBtn');
-const messageCloseBtn = document.getElementById('messageCloseBtn'); // Added element reference
+// FIX: This ID is now correct because we added it to the HTML button
+const messageCloseBtn = document.getElementById('messageCloseBtn'); 
 
 // Set the correct relative path for the JSON file
 const memberDataUrl = 'chamber/data/members.json'; 
@@ -13,8 +14,10 @@ function showMessage(text) {
 }
 
 // --- Event Listener for closing message box (FIX for No onClick Attributes) ---
-if (messageCloseBtn) {
+// We check if the button exists just in case
+if (messageCloseBtn) { 
     messageCloseBtn.addEventListener('click', () => {
+        // This is the correct way to hide the message box
         document.getElementById('messageBox').style.display = 'none';
     });
 }
