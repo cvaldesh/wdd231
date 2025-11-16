@@ -1,7 +1,4 @@
-/*
-NOTE: This CSS file contains all styles for the Licantén Chamber of Commerce homepage.
-It is organized to reflect best practice separation of concerns, as requested.
-*/
+
 /* Basic Reset and Typography */
 body {
     font-family: 'Inter', sans-serif;
@@ -66,7 +63,7 @@ header {
 
 /* Hero Section */
 .hero {
-    background: url('https://placehold.co/1200x500/004d40/ffffff?text=Licant%C3%A9n+Chamber+of+Commerce+Hero+Image') center/cover no-repeat;
+    background: url('../images/licanten.jpg') center/cover no-repeat;
     color: white;
     height: 400px;
     display: flex;
