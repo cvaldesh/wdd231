@@ -1,0 +1,331 @@
+/*
+NOTE: This CSS file contains all styles for the Licantén Chamber of Commerce homepage.
+It is organized to reflect best practice separation of concerns, as requested.
+*/
+/* Basic Reset and Typography */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: #004d40; /* Dark Teal */
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo a {
+    font-size: 1.8em;
+    font-weight: 800;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Navigation */
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.nav-menu li {
+    margin-left: 30px;
+}
+.nav-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+.nav-menu a:hover {
+    color: #80cbc4; /* Light Teal Accent */
+}
+.mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://placehold.co/1200x500/004d40/ffffff?text=Licant%C3%A9n+Chamber+of+Commerce+Hero+Image') center/cover no-repeat;
+    color: white;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.hero-content {
+    z-index: 10;
+}
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+.cta-button {
+    display: inline-block;
+    background-color: #ff9800; /* Orange Accent */
+    color: #004d40;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: 800;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.cta-button:hover {
+    background-color: #f57c00;
+}
+/* Styling for the CTA button used in the navigation bar */
+header .nav-menu .cta-button {
+    background-color:#ff9800; 
+    color:#004d40;
+    margin-top: 0; 
+}
+
+
+/* Main Sections Layout */
+main {
+    padding: 20px 0;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+section {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+h2 {
+    font-size: 2em;
+    font-weight: 800;
+    color: #004d40;
+    border-bottom: 3px solid #b2dfdb;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Events Section */
+.event-item {
+    border-left: 4px solid #004d40;
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
+.event-item h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+}
+.event-item p {
+    margin: 0;
+    color: #555;
+    font-size: 0.95em;
+}
+
+/* Weather Section */
+#weather-info {
+    text-align: center;
+    background-color: #e0f2f1; /* Light background for contrast */
+    padding: 20px;
+    border-radius: 5px;
+}
+#current-weather {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #b2dfdb;
+}
+#current-weather h3 {
+    font-size: 1.5em;
+    color: #004d40;
+    margin-bottom: 5px;
+}
+#current-temp {
+    font-size: 3em;
+    font-weight: 800;
+    color: #ff9800;
+    line-height: 1;
+}
+#current-description {
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 5px;
+    text-transform: capitalize;
+}
+#forecast-container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.forecast-day {
+    flex-grow: 1;
+    padding: 0 5px;
+}
+.forecast-day p {
+    font-size: 0.9em;
+    margin: 3px 0;
+}
+.forecast-day strong {
+    display: block;
+    color: #004d40;
+}
+.loading {
+    color: #004d40;
+    font-style: italic;
+}
+
+/* Spotlights Section */
+#spotlights-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+.spotlight-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    transition: box-shadow 0.3s;
+    position: relative;
+}
+.spotlight-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.spotlight-card h3 {
+    color: #004d40;
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+.member-details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.member-details img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 3px solid #ff9800;
+}
+.level-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+}
+.level-gold { background-color: #ff9800; }
+.level-silver { background-color: #9e9e9e; }
+.detail-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+.detail-line span:first-child {
+    margin-right: 8px;
+    color: #004d40;
+}
+/* Link style within the spotlight details */
+.detail-line a {
+    color: #004d40; 
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #00332c; /* Darker Teal */
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #80cbc4;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Stack content vertically */
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #00332c;
+        position: absolute;
+        top: 70px; /* Adjust based on header height */
+        left: 0;
+        padding: 10px 0;
+    }
+    .nav-menu.active {
+        display: flex;
+    }
+    .nav-menu li {
+        margin: 0;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .nav-menu a {
+        display: block;
+        padding: 10px 0;
+    }
+    .mobile-menu-button {
+        display: block;
+    }
+    .hero h1 {
+        font-size: 2em;
+    }
+    .cta-button {
+        padding: 10px 20px;
+    }
+    #spotlights-container {
+        grid-template-columns: 1fr;
+    }
+}

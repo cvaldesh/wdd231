@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licantén Chamber of Commerce</title>
+    <!-- Use Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- LINK TO EXTERNAL CSS FILE -->
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+
+    <!-- Header and Navigation (Consistent) -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <a href="#">Licantén Chamber</a>
+            </div>
+            <nav>
+                <button class="mobile-menu-button" id="mobile-menu-button">☰</button>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#events-section">Events</a></li>
+                    <li><a href="#spotlights-section">Directory</a></li>
+                    <!-- Note: Styling for this button is now in styles/index.css -->
+                    <li><a href="/join-chamber" class="cta-button">Join Today</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container">
+
+        <!-- Hero Image and Call to Action (CTA) Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Promoting Commerce in Licantén</h1>
+                <p>Connecting businesses, supporting growth, and strengthening our community.</p>
+                <!-- Call to Action Link to Join Page (future page) -->
+                <a href="/join-chamber" class="cta-button">
+                    Join the Chamber!
+                </a>
+            </div>
+        </section>
+
+        <!-- Events and Weather Section -->
+        <div class="grid-container">
+
+            <!-- Current Event(s) Section -->
+            <section id="events-section">
+                <h2>Upcoming Chamber Events</h2>
+                <div class="event-item">
+                    <h3>Monthly Business Mixer</h3>
+                    <p>December 10th | 6:00 PM | Grand Hotel Licantén. Networking and cocktails for members.</p>
+                </div>
+                <div class="event-item">
+                    <h3>Small Business Workshop: SEO Basics</h3>
+                    <p>December 18th | 10:00 AM | Chamber Meeting Room. Free for members, RSVP required.</p>
+                </div>
+            </section>
+
+            <!-- Weather Section -->
+            <section id="weather-section">
+                <h2>Licantén Weather</h2>
+                <div id="weather-info">
+                    <p class="loading">Fetching weather data...</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Company Spotlights Section -->
+        <section id="spotlights-section">
+            <h2>Member Spotlights</h2>
+            <div id="spotlights-container">
+                <p class="loading">Loading featured members...</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer (Consistent) -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Licantén Chamber of Commerce. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- LINK TO EXTERNAL JAVASCRIPT FILE -->
+    <script src="scripts/index.js"></script>
+</body>
+</html>
