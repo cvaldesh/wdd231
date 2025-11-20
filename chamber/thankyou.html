@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Licantén Chamber of Commerce</title>
+    <meta name="description" content="Thank you for joining the Licantén Chamber of Commerce.">
+    <meta name="author" content="Carlos Valdes, WDD 231">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%B0%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css"> 
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/thankyou.css"> </head>
+<body>
+    <header>
+        <h1>Licantén Chamber of Commerce</h1>
+        <p>Maule Region, Chile</p>
+    </header>
+    
+    <nav>
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main class="thankyou-page-main">
+        <h2>🎉 Thank You for Joining!</h2>
+        <p>Your application has been successfully submitted. We will contact you shortly to finalize your membership.</p>
+        
+        <div id="confirmation-details">
+            <h3>Submitted Information Summary:</h3>
+            <p>Please review the details you provided below.</p>
+            
+            <table id="submitted-data-table">
+                </table>
+            
+            <div id="no-data-message" style="display:none;">
+                <p>Could not retrieve submission data from the URL. Please ensure the form was submitted correctly.</p>
+            </div>
+            
+            <a href="index.html" class="cta-button">Return to Home</a>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="copyrightYear"></span> Licantén Chamber of Commerce | <span id="lastModified"></span></p>
+        <p>Contact: info@camaralicanten.cl | +56 75 2555 000</p>
+        <p>Developed by <span id="developerName">Your Name Here</span> - WDD 231</p>
+    </footer>
+
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script> </body>
+</html>

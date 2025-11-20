@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Chamber | Licantén Chamber of Commerce</title>
+    <meta name="description" content="Join the Licantén Chamber of Commerce. Select your membership level and support local growth.">
+    <meta name="author" content="Carlos Valdes, WDD 231">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%B0%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css"> 
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/join.css"> 
+</head>
+<body>
+    <header>
+        <h1>Licantén Chamber of Commerce</h1>
+        <p>Maule Region, Chile</p>
+    </header>
+    
+    <nav>
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="join.html" class="active">Join Today</a></li>
+        </ul>
+    </nav>
+    
+    <main class="join-page-main">
+        <h2>Become a Member</h2>
+        <p>Complete the form below to join and help us strengthen the local economy of Licantén.</p>
+        
+        <div class="join-content-grid">
+            
+            <section class="membership-form-section">
+                <h3>Application Form</h3>
+                <form method="get" action="thankyou.html" class="chamber-form">
+                    
+                    <fieldset>
+                        <legend>Applicant & Contact Information</legend>
+                        
+                        <label>First Name*
+                            <input type="text" id="fname" name="fname" title="Applicant's First Name" required 
+                                autocomplete="given-name">
+                        </label>
+                        
+                        <label>Last Name*
+                            <input type="text" id="lname" name="lname" title="Applicant's Last Name" required 
+                                autocomplete="family-name">
+                        </label>
+                        
+                        <label>Organizational Title (7+ chars)
+                            <input type="text" id="orgTitle" name="orgTitle" title="Organizational Title (Alpha, Hyphens, Spaces only)" 
+                                autocomplete="organization-title" 
+                                pattern="[A-Za-z\s-]{7,}" 
+                                placeholder="Example: Manager, CEO, Owner">
+                        </label>
+
+                        <label>Email*
+                            <input type="email" id="email" name="email" title="Email Address" required 
+                                autocomplete="email" 
+                                placeholder="name@domain.com">
+                        </label>
+
+                        <label>Mobile Phone*
+                            <input type="tel" id="phone" name="phone" title="Mobile Phone Number" required 
+                                autocomplete="tel">
+                        </label>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>Business Details</legend>
+
+                        <label>Business/Organization Name*
+                            <input type="text" id="bizname" name="bizname" title="Business or Organization Name" required 
+                                autocomplete="organization">
+                        </label>
+                        
+                        <div class="membership-level-selection">
+                            <p>Select Membership Level*</p>
+                            
+                            <label><input type="radio" id="np" name="membership" value="np" required> NP Membership (Non-Profit - No Fee)</label>
+                            <label><input type="radio" id="bronze" name="membership" value="bronze"> Bronze Membership</label>
+                            <label><input type="radio" id="silver" name="membership" value="silver"> Silver Membership</label>
+                            <label><input type="radio" id="gold" name="membership" value="gold"> Gold Membership</label>
+                        </div>
+
+                        <label>Business Description (Summary of services/products)
+                            <textarea id="bizDesc" name="bizDesc" title="Business Description" rows="4"></textarea>
+                        </label>
+                    </fieldset>
+                    
+                    <input type="hidden" id="timestamp" name="timestamp" value="Loading...">
+
+                    <button type="submit" class="cta-button submit-btn">Join the Chamber</button>
+                    
+                </form>
+            </section>
+            
+            <section class="membership-levels-section">
+                <h3>Our Membership Levels</h3>
+                <p>Click "View Benefits" to learn more about each level.</p>
+                <div class="membership-cards-container">
+                    
+                    <div class="card np-card">
+                        <h4>NP Membership (No Fee)</h4>
+                        <p class="cost">Free</p>
+                        <a href="#" class="modal-trigger" data-modal="np-modal">View Benefits</a>
+                    </div>
+
+                    <div class="card bronze-card">
+                        <h4>Bronze Membership</h4>
+                        <p class="cost">$50/Month</p>
+                        <a href="#" class="modal-trigger" data-modal="bronze-modal">View Benefits</a>
+                    </div>
+
+                    <div class="card silver-card">
+                        <h4>Silver Membership</h4>
+                        <p class="cost">$100/Month</p>
+                        <a href="#" class="modal-trigger" data-modal="silver-modal">View Benefits</a>
+                    </div>
+
+                    <div class="card gold-card">
+                        <h4>Gold Membership</h4>
+                        <p class="cost">$200/Month</p>
+                        <a href="#" class="modal-trigger" data-modal="gold-modal">View Benefits</a>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+    
+    <div id="np-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h4>NP Membership Benefits</h4>
+            <ul>
+                <li>Participation in all Chamber meetings.</li>
+                <li>Access to member-only resources and documentation.</li>
+                <li>Non-profit listing in the official Chamber Directory.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="bronze-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h4>Bronze Membership Benefits</h4>
+            <ul>
+                <li>All NP Benefits included.</li>
+                <li>10% discount on event attendance and training workshops.</li>
+                <li>Networking opportunities with local business leaders.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="silver-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h4>Silver Membership Benefits</h4>
+            <ul>
+                <li>All Bronze Benefits included.</li>
+                <li>25% discount on event attendance and training workshops.</li>
+                <li>Priority listing placement in the Chamber Directory.</li>
+                <li>Opportunity for a single feature in the monthly email newsletter.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="gold-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h4>Gold Membership Benefits</h4>
+            <ul>
+                <li>All Silver Benefits included.</li>
+                <li>50% discount on event attendance and training workshops.</li>
+                <li>Top tier, rotating **Spotlight** position on the Home Page.</li>
+                <li>Exclusive invitation to CEO-level roundtables.</li>
+                <li>Free use of Chamber meeting facilities (4 hours/month).</li>
+            </ul>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; <span id="copyrightYear"></span> Licantén Chamber of Commerce | <span id="lastModified"></span></p>
+        <p>Contact: info@camaralicanten.cl | +56 75 2555 000</p>
+        <p>Developed by <span id="developerName">Your Name Here</span> - WDD 231</p>
+    </footer>
+
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+    
+</body>
+</html>
