@@ -1,0 +1,25 @@
+/* chamber/discover/styles/large.css */
+
+@media (min-width: 1025px) {
+    
+    /* --- General Adjustments --- */
+    #discover-main {
+        max-width: 1200px;
+        padding: 2rem;
+    }
+
+    /* --- Main Grid Layout (4x2 Structure remains, maximized width) --- */
+    #interest-grid {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1200px;
+        margin: 30px auto;
+        gap: 25px;
+    }
+
+    /* The Named Grid Areas and the Hover Effect are inherited from medium.css */
+
+    /* --- Internal Card Layout Refinements --- */
+    .interest-card h2 {
+        font-size: 1.5rem;
+    }
+}

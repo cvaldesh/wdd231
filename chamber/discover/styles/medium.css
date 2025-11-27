@@ -1,0 +1,60 @@
+/* chamber/discover/styles/medium.css */
+
+@media (min-width: 641px) {
+    /* --- General Adjustments --- */
+    #discover-main {
+        max-width: 1000px;
+        padding: 1.5rem;
+    }
+
+    /* --- Navigation (Horizontal Layout) --- */
+    nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    /* --- Main Grid Layout (4x2 Structure) --- */
+    #interest-grid {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1000px;
+        margin: 20px auto;
+        gap: 15px;
+        padding: 0;
+    }
+
+    /* Assigning Named Grid Areas to the 8 cards */
+    #interest-grid .interest-card:nth-child(1) { grid-area: taza; }
+    #interest-grid .interest-card:nth-child(2) { grid-area: torca; }
+    #interest-grid .interest-card:nth-child(3) { grid-area: lago; }
+    #interest-grid .interest-card:nth-child(4) { grid-area: quenes; }
+    #interest-grid .interest-card:nth-child(5) { grid-area: vina; }
+    #interest-grid .interest-card:nth-child(6) { grid-area: plaza; }
+    #interest-grid .interest-card:nth-child(7) { grid-area: cerro; }
+    #interest-grid .interest-card:nth-child(8) { grid-area: tortas; }
+
+    #interest-grid {
+        /* Define the 4x2 structure using Named Grid Areas */
+        grid-template-areas:
+            "taza torca lago quenes"
+            "vina plaza cerro tortas";
+    }
+
+    /* --- Image Hover Effect (Enabled) --- */
+    .interest-card figure img {
+        /* Add transition for smooth effect */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        /* Ensure cursor indicates interactivity */
+        cursor: pointer;
+    }
+
+    .interest-card figure img:hover {
+        /* Effect: Slightly larger and raised using shadow */
+        transform: scale(1.05); 
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* --- Internal Card Layout Adjustment (Optional for larger content display) --- */
+    .interest-card {
+        padding: 10px;
+    }
+}
