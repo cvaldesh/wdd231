@@ -1,72 +1,194 @@
-/* Stylesheet for Carlos Valdés Portfolio Site Plan */
+/* styles/styles.css Vanilla CSS for Carlos Valdés Portfolio */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@300;400;500&family=Roboto+Mono&display=swap');
 
-/* Importing Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400;500&family=Roboto+Mono&display=swap');
-
-/* Color Variables */
-:root {
+:root{
     --primary: #1A4D8F;
-    --secondary: #F2F5F9;
     --accent: #E67E22;
+    --bg: #F2F5F9;
+    --card: #ffffff;
+    --muted: #666666;
 }
 
-/* Global Styles */
+*{box-sizing: border-box}
+html, body {height:100%}
+
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--secondary);
-    margin: 0;
-    padding: 20px;
-    color: #333;
+    margin:0;
+    font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', Roboto,
+        'Helvetica Neue', Arial;
+    background: var(--bg);
+    color:#222;
+    -webkit-font-smoothing: antialiased;
 }
 
-header h1 {
+.container {
+    max-width: 1000px;
+    margin:0 auto; 
+    padding: 20px
+}
+
+.site-header {
+    background: var(--card); 
+    border-bottom:4px solid rgba(26,77,143, 0.06)
+}
+
+.header-inner {
+    display: flex; 
+    align-items:center; 
+    justify-content:space-between; 
+    padding: 14px 20px
+}
+
+.logo a{
     font-family: 'Poppins', sans-serif;
-    color: var(--primary);
-    text-align: center;
-    margin-bottom: 30px;
+    color:var(--primary); 
+    text-decoration:none;
+    font-size:1.2rem
 }
 
-section {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+.nav{
+    list-style:none;
+    margin:0; 
+    padding: 0; 
+    display: flex; 
+    gap: 12px
 }
 
-h2 {
+.nav a{
+    text-decoration:none; 
+    color:var(--primary); 
+    padding: 8px; 
+    border-radius: 6px
+}
+
+.nav a:hover{
+    background:rgba(26,77,143,0.06)
+}
+
+.hero{
+    background: var(--card); 
+    padding: 28px; 
+    border-radius: 10px; 
+    margin-top:18px
+}
+
+.hero h2{
+    margin-top:0;
     font-family: 'Poppins', sans-serif;
-    color: var(--primary);
-    border-bottom: 2px solid var(--accent);
-    padding-bottom: 5px;
+    color:var(--primary)
 }
 
-ul li {
-    margin: 8px 0;
+.lead{
+    color:var(--muted); 
+    font-size:1rem
 }
 
-/* Wireframe Section */
-.wireframes {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+.hero-ctas{
+    margin-top:12px
 }
 
-figure {
-    flex: 1 1 300px;
-    text-align: center;
+.btn{
+    display: inline-block;
+    padding: 10px 16px; 
+    border-radius: 8px; 
+    background:var(--primary); 
+    color:#fff;
+    text-decoration:none;
+    margin-right:8px
 }
 
-figure img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 8px;
-    border: 2px solid var(--primary);
+.btn-outline{
+    background: transparent; 
+    border: 2px solid var(--primary); 
+    color:var(--primary)
 }
 
-figcaption {
-    margin-top: 8px;
-    font-family: 'Roboto Mono', monospace;
-    color: var(--accent);
-    font-size: 0.9rem;
+.widgets{
+    display: flex; 
+    gap: 16px;
+    margin-top: 20px; 
+    flex-wrap:wrap
+}
+
+.card{
+    background: var(--card); 
+    padding: 16px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06); 
+    flex:1 1 220px
+}
+
+.weather-content{
+    display: flex; 
+    align-items:center; 
+    gap:12px
+}
+
+#weather-icon{
+    width: 48px;
+    height:48px
+}
+
+#weather-temp{
+    font-size:1.1rem; 
+    font-weight:500
+}
+
+.muted{
+    color:var(--muted); 
+    font-size:0.9rem
+}
+
+.summary{
+    margin-top: 20px; 
+    background: var(--card); 
+    padding: 16px; 
+    border-radius: 8px
+}
+
+.techstack .chips{
+    display: flex; 
+    flex-wrap:wrap; 
+    gap:8px
+}
+
+.chip{
+    background:#fff;
+    padding:6px 10px; 
+    border-radius: 999px; 
+    border: 1px solid rgba(0,0,0,0.06); 
+    font-size:0.9rem
+}
+
+.projects-grid .grid{
+    display:grid; 
+    grid-template-columns: repeat(auto-fit,minmax(260px, 1fr)); 
+    gap: 16px;
+    margin-top:12px
+}
+
+.card h4{
+    margin:0 0 8px 0
+}
+
+.site-footer {
+    padding: 18px 0; 
+    margin-top: 24px; 
+    text-align:center;
+    color:var(--muted)
+}
+
+/* Responsive */
+@media (max-width: 680px) {
+    .header-inner{
+        flex-direction:column; 
+        align-items:flex-start; 
+        gap:10px
+    }
+    .nav{
+        flex-wrap:wrap
+    }
+    .widgets{
+        flex-direction:column
+    }
 }

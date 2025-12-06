@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Carlos Valdés Portfolio</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <h1 class="logo"><a href="index.html">Carlos Valdés</a></h1>
+            <nav aria-label="Primary">
+                <ul class="nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section class="hero">
+            <h2>Ocean Freight Specialist &amp; Industrial Engineer</h2>
+            <p class="lead">Operational expert in ocean freight, import logistics, and
+                supply chain processes. Skilled in Infor M3, SAP, Excel, Power BI, and
+                automation with Python.
+            </p>
+            <div class="hero-ctas">
+                <a class="btn" href="about.html">About Me</a>
+                <a class="btn btn-outline" href="projects.html">Projects</a>
+            </div>
+        </section>
+        <section class="widgets">
+            <div class="card weather" id="weather-card">
+                <h3>Current Weather
+                    Santiago
+                </h3>
+                <div class="weather-content">
+                    <div id="weather-icon" aria-hidden="true"></div>
+                    <div>
+                        <p id="weather-temp">-- °C</p>
+                        <p id="weather-desc">Loading...</p>
+                    </div>
+                </div>
+                <p class="muted">Data from OpenWeatherMap</p>
+            </div>
+            <div class="card time" aria-live="polite">
+                <h3>Local Time Santiago</h3>
+                <p id="chile-time">--:--:--</p>
+            </div>
+            <div class="card contact-short">
+                <h3>Connect</h3>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/carlos-valdes-684a5a193/?locale=en_US" target="_blank" rel="noopener">/in/carlos-valdes-
+                    industrial-engineer</a>
+                </p>
+            </div>
+        </section>
+        <section class="summary">
+            <h3>Quick Summary</h3>
+            <ul>
+                <li>4 years experience in international trade and ocean freight
+                    logistics
+                </li>
+                <li>Experience with frozen &amp; dry cargo, container operations, and
+                    carrier coordination
+                </li>
+                <li>Familiar with Infor Nexus, Infor M3, and SAP for costing and
+                    operations
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <p> <span id="year"></span> Carlos Valdés Built with HTML, CSS, and
+                vanilla JavaScript.
+            </p>
+        </div>
+    </footer>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
